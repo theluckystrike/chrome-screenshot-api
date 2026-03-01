@@ -1,0 +1,38 @@
+{
+    "name": "chrome-screenshot-api",
+    "version": "0.1.0",
+    "description": "Chrome Screenshot & Screen Capture utilities — capture visible tab, full page, element screenshots, and screen recording for MV3 extensions.",
+    "author": "Zovo <hello@zovo.one>",
+    "license": "MIT",
+    "keywords": [
+        "chrome-extension",
+        "screenshot",
+        "screen-capture",
+        "capture",
+        "tab-capture",
+        "manifest-v3",
+        "browser-extension",
+        "image",
+        "recording"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/theluckystrike/chrome-screenshot-api.git"
+    },
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "jest",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "@types/chrome": "^0.0.260",
+        "typescript": "^5.3.3"
+    }
+}
