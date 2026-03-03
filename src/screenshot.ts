@@ -4,7 +4,7 @@
 export class ScreenshotManager {
     /** Capture visible area of current tab */
     static async captureVisibleTab(format: 'png' | 'jpeg' = 'png', quality?: number): Promise<string> {
-        return chrome.tabs.captureVisibleTab(undefined, { format, quality });
+        return chrome.tabs.captureVisibleTab(chrome.windows.WINDOW_ID_CURRENT, { format, quality });
     }
 
     /** Capture and download */
