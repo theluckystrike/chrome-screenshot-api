@@ -1,12 +1,45 @@
-# chrome-screenshot-api — Screenshots for Chrome Extensions
-> **Built by [Zovo](https://zovo.one)**
+# chrome-screenshot-api
 
-Capture visible tab, download, copy to clipboard, timestamped screenshots, multi-tab capture. `npm i chrome-screenshot-api`
+Capture screenshots in Chrome extensions with advanced options.
 
-```typescript
-import { ScreenshotManager } from 'chrome-screenshot-api';
-await ScreenshotManager.captureAndDownload('page.png');
-await ScreenshotManager.captureToClipboard();
-await ScreenshotManager.captureTimestamped();
+## Overview
+
+chrome-screenshot-api provides utilities to capture visible area, full page, or selected regions as PNG/JPEG images.
+
+## Installation
+
+```bash
+npm install chrome-screenshot-api
 ```
-MIT License
+
+## Usage
+
+### Capture Visible Area
+
+```javascript
+import { screenshot } from 'chrome-screenshot-api';
+
+const image = await screenshot.capture(tabId);
+```
+
+### Full Page Screenshot
+
+```javascript
+const fullPage = await screenshot.captureFull(tabId);
+```
+
+## API
+
+### Methods
+
+- `capture(tabId)` - Capture visible area
+- `captureFull(tabId)` - Capture full page
+- `captureRegion(tabId, rect)` - Capture region
+
+## Browser Support
+
+- Chrome 90+
+
+## License
+
+MIT
